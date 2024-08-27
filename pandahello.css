@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+    background-size: 600% 600%;
+    animation: rainbow 10s ease infinite;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.panda {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    animation: rock 3s infinite ease-in-out;
+}
+
+.message {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    margin-top: 20px;
+}
+
+@keyframes rock {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
